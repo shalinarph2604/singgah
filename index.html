@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <title>Welcome to Singgah</title>
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <nav>
+            <h2 id="logo">Singgah</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotels.html">Hotel List</a></li>
+                <li><a href="reservation.html">Reservation Form</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <!--main container of landing page-->
+        <div>
+            <h1>Welcome to Singgah!</h1>
+            <h3>Find your perfect stay, anytime, anywhere</h3>
+            <h5>Discover prices, locations, and availability in one simple place</h5>
+            <form>
+                <label for="city">Destination</label>
+                <input id="city" type="text" name="location" placeholder="Choose your city destination" required>
+
+                <label for="checkin">Check-in Date</label>
+                <input id="checkin" name="checkin" type="date" required>
+
+                <label for="checkout">Check-out Date</label>
+                <input id="checkout" name="checkout" type="date" required>
+
+                <label for="guests">Guests</label>
+                <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
+
+                <label for="roomType">Room Type</label>
+                <select name="roomType" required>
+                    <option value="" disabled selected>Room Type</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+
+                <button type="submit">Find your rooms</button>
+            </form>
+        </div>
+
+        <!--second slide of the container-->
+        <div>
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>Easy hotel search</li>
+                <li>Trusted hotel information</li>
+                <li>Affordable prices</li>
+                <li>Simple and user-friendly interface</li>
+            </ul>
+        </div>
+        <footer>
+            <p>&copy; 2024 Singgah. All rights reserved.</p>
+        </footer>
+        
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

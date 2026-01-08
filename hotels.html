@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <title>Singgah | Find your Room</title>
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <nav>
+            <h2 id="logo">Singgah</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotels.html">Hotel List</a></li>
+                <li><a href="reservation.html">Reservation Form</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div id="hotels">
+            <!-- Hotel list will be populated here -->
+        </div>
+        <footer>
+            <p>&copy; 2024 Singgah. All rights reserved.</p>
+        </footer>
+
+        <script src="assets/js/script.js"></script>
+        <script>
+            const hotels = [
+                { 
+                    id: crypto.randomUUID(),
+                    name: "Hotel A",
+                    desc: "Comfortable hotel near from public places",
+                    location: "Surabaya",
+                    available: 3,
+                    price: "$100/night",
+                    imageUrl: "xxx"
+                }
+            ];
+        </script>
+    </body>
+</html>
