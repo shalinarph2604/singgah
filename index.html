@@ -6,23 +6,40 @@
         <link rel="stylesheet" href="assets/css/styles.css">
         <title>Welcome to Singgah</title>
     </head>
+    <!--THIS IS THE LANDING PAGE-->
     <body>
         <!--Navigation Bar-->
         <nav>
-            <h2 id="logo">Singgah</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hotels.html">Hotel List</a></li>
-                <li><a href="reservation.html">Reservation Form</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
+            <div id="logo">
+                <h2
+                    id="logo"
+                    style="
+                        color:#AA8B56;
+                        font-family:Copperplate, Papyrus, fantasy;
+                    ">
+                    Singgah
+                </h2>
+            </div>
+            <div id="navlink">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotels.html">Hotels List</a></li>
+                    <li><a href="reservation.html">Reservation Form</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
         </nav>
 
         <!--main container of landing page-->
-        <div>
-            <h1>Welcome to Singgah!</h1>
-            <h3>Find your perfect stay, anytime, anywhere</h3>
-            <h5>Discover prices, locations, and availability in one simple place</h5>
+        <div id="container">
+            <h1 style="
+                color:#F0EBCE;
+                font-family:Copperplate, Papyrus, fantasy;
+            ">
+                Welcome to Singgah!
+            </h1>
+            <h3 style="color:#AA8B56">Find your perfect stay, anytime, anywhere</h3>
+            <h5 style="color:#AA8B56">Discover prices, locations, and availability in one simple place</h5>
             <form>
                 <label for="city">Destination</label>
                 <input id="city" type="text" name="location" placeholder="Choose your city destination" required>
