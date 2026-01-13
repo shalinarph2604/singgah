@@ -33,27 +33,28 @@
         <!--main container of landing page-->
         <div id="container">
             <h1 style="
-                color:#F0EBCE;
-                font-family:Copperplate, Papyrus, fantasy;
+                color:#AA8B56;
+                text-align: center;
             ">
-                Welcome to Singgah!
+                Welcome to <span style="font-family:Copperplate, Papyrus, fantasy;">Singgah</span>!
             </h1>
-            <h3 style="color:#AA8B56">Find your perfect stay, anytime, anywhere</h3>
-            <h5 style="color:#AA8B56">Discover prices, locations, and availability in one simple place</h5>
+            <h2 style="color:#F0EBCE; text-align: center;">Find your perfect stay, anytime, anywhere</h3>
+            <h3 style="color:#F0EBCE; margin-bottom:30px; text-align:center;">Discover prices, locations, and availability in one simple place</h5>
             <form>
-                <label for="city">Destination</label>
                 <input id="city" type="text" name="location" placeholder="Choose your city destination" required>
 
-                <label for="checkin">Check-in Date</label>
-                <input id="checkin" name="checkin" type="date" required>
-
-                <label for="checkout">Check-out Date</label>
-                <input id="checkout" name="checkout" type="date" required>
-
-                <label for="guests">Guests</label>
+                <div id="dateInputs">
+                    <div id="checkinDate">
+                        <label for="checkin">Check-in date</label>
+                        <input id="checkin" name="checkin" type="date" required>
+                    </div>
+                    <div id="checkoutDate">
+                        <label for="checkout">Check-out date</label>
+                        <input id="checkout" name="checkout" type="date" required>
+                    </div>
+                </div>
                 <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
 
-                <label for="roomType">Room Type</label>
                 <select name="roomType" required>
                     <option value="" disabled selected>Room Type</option>
                     <option value="single">Single</option>
@@ -61,19 +62,25 @@
                     <option value="suite">Suite</option>
                 </select>
 
-                <button type="submit">Find your rooms</button>
+                <button id="submit" type="submit">Find your room!</button>
             </form>
         </div>
 
         <!--second slide of the container-->
-        <div>
-            <h2>Why Choose Us</h2>
-            <ul>
-                <li>Easy hotel search</li>
-                <li>Trusted hotel information</li>
-                <li>Affordable prices</li>
-                <li>Simple and user-friendly interface</li>
-            </ul>
+        <div id="whyUs">
+            <h1 style="color:#AA8B56;">Why choose <span style="font-family:Copperplate, Papyrus, fantasy;">Singgah</span>?</h2>
+                <div id="gallery">
+                    <img src="assets/img/image1.jpg" alt="Happy travelers" class="whyUsImg">
+                    <img src="assets/img/image2.jpg" alt="Hotel room" class="whyUsImg">
+                </div>
+                <div id="whyPoints">
+                    <ul>
+                        <li class="whyPoint">Easy hotel search</li>
+                        <li class="whyPoint">Trusted hotel information</li>
+                        <li class="whyPoint">Affordable prices</li>
+                        <li class="whyPoint">Simple and user-friendly interface</li>
+                    </ul>
+                </div>
         </div>
         <footer>
             <p>&copy; 2024 Singgah. All rights reserved.</p>
