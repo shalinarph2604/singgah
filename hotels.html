@@ -9,34 +9,90 @@
     <body>
         <!--Navigation Bar-->
         <nav>
-            <h2 id="logo">Singgah</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hotels.html">Hotel List</a></li>
-                <li><a href="reservation.html">Reservation Form</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
+            <div id="logo">
+                <h2
+                    id="logo"
+                    style="
+                        color:#AA8B56;
+                        font-family:Copperplate, Papyrus, fantasy;
+                    ">
+                    Singgah
+                </h2>
+            </div>
+            <div id="navlink">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotels.html">Hotels List</a></li>
+                    <li><a href="reservation.html">Reservation Form</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
         </nav>
         <div id="hotels">
             <!-- Hotel list will be populated here -->
         </div>
-        <footer>
-            <p>&copy; 2024 Singgah. All rights reserved.</p>
-        </footer>
+        
 
         <script src="assets/js/script.js"></script>
         <script>
             const hotels = [
                 { 
-                    id: crypto.randomUUID(),
-                    name: "Hotel A",
+                    id: 1,
+                    name: "Hotel Alfa",
                     desc: "Comfortable hotel near from public places",
                     location: "Surabaya",
                     available: 3,
-                    price: "$100/night",
-                    imageUrl: "xxx"
+                    price: 200000,
+                    imageUrl: "assest/img/hotel1.jpg"
+                },
+                {
+                    id: 2,
+                    name: "Hotel Beta",
+                    desc: "Luxury hotel with premium amenities",
+                    location: "Jakarta",
+                    available: 5,
+                    price: 500000,
+                    imageUrl: "assest/img/hotel2.jpg"
+                },
+                {
+                    id: 3,
+                    name: "Hotel Gamma",
+                    desc: "Cozy hotel with a peaceful atmosphere",
+                    location: "Bandung",
+                    available: 2,
+                    price: 150000,
+                    imageUrl: "assest/img/hotel3.jpg"
+                },
+                {
+                    id: 4,
+                    name: "Hotel Delta",
+                    desc: "Modern hotel with excellent service",
+                    location: "Yogyakarta",
+                    available: 4,
+                    price: 400000,
+                    imageUrl: "assest/img/hotel4.jpg"
+                },
+                {
+                    id: 5,
+                    name: "Hotel Epsilon",
+                    desc: "Elegant hotel with a charming ambiance",
+                    location: "Semarang",
+                    available: 1,
+                    price: 700000,
+                    imageUrl: "assest/img/hotel5.jpg"
                 }
             ];
+
+            const hotelCards = hotels.map(hotel => `
+                    <div class="hotel-card">
+                        <h2 class="hotel-name">${hotel.name}</h2>
+                        <p class="hotel-desc">${hotel.desc}</p>
+                        <p class="hotel-location"><strong>Location:</strong> ${hotel.location}</p>
+                        <p class="hotel-available"><strong>Rooms Available:</strong> ${hotel.available}</p>
+                    </div>
+                `
+            )
+
         </script>
     </body>
 </html>

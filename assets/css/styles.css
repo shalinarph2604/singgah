@@ -7,6 +7,7 @@
 
 body {
     font-family: Helvetica, sans-serif;
+    background-color: #F0EBCE;
 }
 
 /* Navigation Bar Styles */
@@ -185,14 +186,41 @@ footer {
 
 /* About Page Styles */
 
-#aboutPage {
-    padding-top: 6dvh;
-    height: 100vh;
+#about {
+    padding: 80px 60px 70px 60px;
+    margin:auto;
+    height:100vh;
+    background-image:linear-gradient(to top, #F0EBCE, #395144);
+    line-height:1.6;
+    text-align:center;
+}
+
+#contact {
     background-size: cover;
-    background-image: linear-gradient(to top, #F0EBCE, #395144);
+    background-color: #F0EBCE;
     text-align: center;
 }
 
 .aboutContent {
-    color: #F0EBCE;
+    color:#F0EBCE;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.contactContent {
+    color:#395144;
+    font-size:18px;
+}
+
+#aboutImages {
+    padding-right: 40px;
+    padding-top: 20px;
+}
+
+.aboutImage {
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow:rgba(0, 0, 0, 0.2)
 }
