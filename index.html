@@ -25,65 +25,75 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="hotels.html">Hotels List</a></li>
                     <li><a href="reservation.html">Reservation Form</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="task_css/about.html">About Us</a></li>
                 </ul>
             </div>
         </nav>
 
         <!--main container of landing page-->
         <div id="container">
-            <h1 style="
-                color:#AA8B56;
-                text-align: center;
-            ">
-                Welcome to <span style="font-family:Copperplate, Papyrus, fantasy;">Singgah</span>!
-            </h1>
-            <h2 style="color:#F0EBCE; text-align: center;">Find your perfect stay, anytime, anywhere</h3>
-            <h3 style="color:#F0EBCE; margin-bottom:30px; text-align:center;">Discover prices, locations, and availability in one simple place</h5>
-            <form>
-                <input id="city" type="text" name="location" placeholder="Choose your city destination" required>
+            <div id="landingPage">
+                <h1 style="
+                    color:#AA8B56;
+                    text-align: center;
+                ">
+                    Welcome to <span style="font-family:Copperplate, Papyrus, fantasy;">Singgah</span>!
+                </h1>
+                <h2 style="color:#F0EBCE; text-align: center;">Find your perfect stay, anytime, anywhere</h3>
+                <h3 style="color:#F0EBCE; margin-bottom:30px; text-align:center;">Discover prices, locations, and availability in one simple place</h5>
+                <form>
+                    <input id="city" type="text" name="location" placeholder="Choose your city destination" required>
 
-                <div id="dateInputs">
-                    <div id="checkinDate">
-                        <label for="checkin">Check-in date</label>
-                        <input id="checkin" name="checkin" type="date" required>
+                    <div id="dateInputs">
+                        <div id="checkinDate">
+                            <label for="checkin">Check-in date</label>
+                            <input id="checkin" name="checkin" type="date" required>
+                        </div>
+                        <div id="checkoutDate">
+                            <label for="checkout">Check-out date</label>
+                            <input id="checkout" name="checkout" type="date" required>
+                        </div>
                     </div>
-                    <div id="checkoutDate">
-                        <label for="checkout">Check-out date</label>
-                        <input id="checkout" name="checkout" type="date" required>
-                    </div>
-                </div>
-                <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
+                    <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
 
-                <select name="roomType" required>
-                    <option value="" disabled selected>Room Type</option>
-                    <option value="single">Single</option>
-                    <option value="double">Double</option>
-                    <option value="suite">Suite</option>
-                </select>
+                    <select name="roomType" required>
+                        <option value="" disabled selected>Room Type</option>
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="suite">Suite</option>
+                    </select>
 
-                <button id="submit" type="submit">Find your room!</button>
-            </form>
+                    <button id="submit" type="submit">Find your room!</button>
+                </form>
+            </div>
         </div>
 
         <!--second slide of the container-->
         <div id="whyUs">
-            <h1 style="color:#AA8B56;">Why choose <span style="font-family:Copperplate, Papyrus, fantasy;">Singgah</span>?</h2>
-                <div id="gallery">
-                    <img src="assets/img/image1.jpg" alt="Happy travelers" class="whyUsImg">
-                    <img src="assets/img/image2.jpg" alt="Hotel room" class="whyUsImg">
-                </div>
-                <div id="whyPoints">
-                    <ul>
-                        <li class="whyPoint">Easy hotel search</li>
-                        <li class="whyPoint">Trusted hotel information</li>
-                        <li class="whyPoint">Affordable prices</li>
-                        <li class="whyPoint">Simple and user-friendly interface</li>
-                    </ul>
-                </div>
+            <div id="gallery">
+                <img src="assets/img/image1.jpg" alt="Happy travelers" class="whyUsImg">
+                <img src="assets/img/image2.jpg" alt="Hotel room" class="whyUsImg">
+            </div>
+            <div id="whyPoints">
+                <h1 style="
+                    color:#AA8B56;
+                    margin-bottom:15px;
+                    text-align: center;
+                    text-shadow: 2px 2px 4px #bebaba;
+                    font-size: 50px;
+                ">
+                    Why choose <span style="font-family:Copperplate, Papyrus, fantasy;">Singgah</span>?
+                </h1>
+                <ul style="margin-bottom:30px;">
+                    <li class="whyPoint">Easy hotel search</li>
+                    <li class="whyPoint">Trusted hotel information</li>
+                    <li class="whyPoint">Affordable prices</li>
+                    <li class="whyPoint">Simple and user-friendly interface</li>
+                </ul>
+            </div>
         </div>
         <footer>
-            <p>&copy; 2024 Singgah. All rights reserved.</p>
+            <p>&copy; 2026 Singgah. All rights reserved.</p>
         </footer>
         
         <script src="assets/js/script.js"></script>

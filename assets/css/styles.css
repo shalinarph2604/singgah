@@ -9,6 +9,8 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
+/* Navigation Bar Styles */
+
 nav {
     background-color: #395144;
     position: fixed;
@@ -17,6 +19,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -49,12 +52,17 @@ a:hover {
     margin-right: 30px;
 }
 
+/* Landing Page Styles */
 
 #container {
-    padding-top: 80px;
     height: 100vh;
     width: 100%;
-    background-size: cover;
+}
+
+#landingPage {
+    padding-top: 80px;
+    background-size:cover;
+    height: 100vh;
     background-image:url(../img/landing-page.jpg);
 }
 
@@ -67,7 +75,7 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-label{
+label {
     display: block;
 }
 
@@ -125,7 +133,11 @@ select {
 #whyUs {
     padding: 50px;
     text-align: center;
-    background-color: #F0EBCE;
+    background-image: linear-gradient(to bottom, #F0EBCE, #e7dea9);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: space-between;
 }
 
 #whyUs ul li {
@@ -141,6 +153,9 @@ select {
     border-radius: 5px;
     padding: 12px;
     cursor: pointer;
+    width: 80%;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);;
 }
 
 .whyPoint:hover {
@@ -149,5 +164,35 @@ select {
 
 .whyUsImg {
     height: 200px;
-    width: 350px
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #AA8B56;
+    color: #F0EBCE;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* About Page Styles */
+
+#aboutPage {
+    padding-top: 6dvh;
+    height: 100vh;
+    background-size: cover;
+    background-image: linear-gradient(to top, #F0EBCE, #395144);
+    text-align: center;
+}
+
+.aboutContent {
+    color: #F0EBCE;
 }
