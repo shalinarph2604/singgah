@@ -15,7 +15,8 @@
                     style="
                         color:#AA8B56;
                         font-family:Copperplate, Papyrus, fantasy;
-                    ">
+                    "
+                >
                     Singgah
                 </h2>
             </div>
@@ -28,8 +29,13 @@
                 </ul>
             </div>
         </nav>
-        <div id="hotels">
-            <!-- Hotel list will be populated here -->
+        <div id="hotelsPage">
+            <h1 style="color:#AA8B56; font-size:40px">
+                Mau <span style="font-family:Copperplate, Papyrus, fantasy;">Singgah</span> di mana?
+            </h1>
+            <div id="hotelsContainer">
+                <!-- Hotel list will be populated here -->
+            </div>
         </div>
         
 
@@ -42,8 +48,8 @@
                     desc: "Comfortable hotel near from public places",
                     location: "Surabaya",
                     available: 3,
-                    price: 200000,
-                    imageUrl: "assest/img/hotel1.jpg"
+                    price: 1200000,
+                    imageUrl: "assets/img/room1.jpg"
                 },
                 {
                     id: 2,
@@ -51,8 +57,8 @@
                     desc: "Luxury hotel with premium amenities",
                     location: "Jakarta",
                     available: 5,
-                    price: 500000,
-                    imageUrl: "assest/img/hotel2.jpg"
+                    price: 1500000,
+                    imageUrl: "assets/img/room2.jpg"
                 },
                 {
                     id: 3,
@@ -60,8 +66,8 @@
                     desc: "Cozy hotel with a peaceful atmosphere",
                     location: "Bandung",
                     available: 2,
-                    price: 150000,
-                    imageUrl: "assest/img/hotel3.jpg"
+                    price: 1150000,
+                    imageUrl: "assets/img/room3.jpg"
                 },
                 {
                     id: 4,
@@ -69,8 +75,8 @@
                     desc: "Modern hotel with excellent service",
                     location: "Yogyakarta",
                     available: 4,
-                    price: 400000,
-                    imageUrl: "assest/img/hotel4.jpg"
+                    price: 1400000,
+                    imageUrl: "assets/img/room4.jpg"
                 },
                 {
                     id: 5,
@@ -78,20 +84,89 @@
                     desc: "Elegant hotel with a charming ambiance",
                     location: "Semarang",
                     available: 1,
-                    price: 700000,
-                    imageUrl: "assest/img/hotel5.jpg"
+                    price: 1700000,
+                    imageUrl: "assets/img/room5.jpg"
                 }
             ];
 
+            const hotelsContainer = document.getElementById('hotelsContainer');
+
+            const priceFormatted = (price) => {
+                return new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    minimumFractionDigits: 0
+                }).format(price);
+            };    
+
             const hotelCards = hotels.map(hotel => `
-                    <div class="hotel-card">
+                    <div class="hotel-card"
+                        style="
+                            border: 1px solid #ccc; 
+                            border-radius: 10px; 
+                            padding: 15px; 
+                            background-color: #F0EBCE;
+                            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                            cursor: pointer;
+                            display: flex;
+                            flex-direction: column;
+                        "
+                    >
+                        <div class="hotel-image"
+                            style="position:relative;"
+                        >
+                            <img  
+                                src="${hotel.imageUrl}" alt="${hotel.name}"
+                                style="
+                                    width:100%;
+                                    height:200px;
+                                    margin-bottom:8px;
+                                "
+                            >
+                            <span
+                                style="
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 10px;
+                                    background-color: #AA8B56;
+                                    color: #F0EBCE;
+                                    font-weight: bold;
+                                    padding: 5px 10px;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                "
+                            >Rooms available: ${hotel.available}</span>
+                        </div>
                         <h2 class="hotel-name">${hotel.name}</h2>
-                        <p class="hotel-desc">${hotel.desc}</p>
-                        <p class="hotel-location"><strong>Location:</strong> ${hotel.location}</p>
-                        <p class="hotel-available"><strong>Rooms Available:</strong> ${hotel.available}</p>
+                        <p class="hotel-desc"
+                            style="
+                                color: #505050;
+                                margin-bottom: 8px;
+                                font-size: 16px;
+                            "
+                        >
+                            ${hotel.desc}
+                        </p>
+                        <div class="hotel-info"
+                            style="
+                                margin-top: auto;
+                            "
+                        >
+                            <p class="hotel-price"
+                                style="
+                                    font-weight: bold;
+                                    color: #395144;
+                                    bottom: 0;
+                                "
+                            >
+                                <span>${priceFormatted(hotel.price)}</span>/night
+                            </p>
+                        </div>
                     </div>
                 `
-            )
+            ).join('');
+
+            hotelsContainer.innerHTML = hotelCards;
 
         </script>
     </body>

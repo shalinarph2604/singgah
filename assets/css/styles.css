@@ -21,6 +21,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 a {
@@ -223,4 +224,18 @@ footer {
     object-fit: cover;
     border-radius: 10px;
     box-shadow:rgba(0, 0, 0, 0.2)
+}
+
+/* Hotels Page Styles */
+#hotelsPage {
+    padding: 80px 40px 20px 40px;
+    background-image: linear-gradient(to bottom, #395144, #F0ebce);
+}
+
+#hotelsContainer {
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    
 }
