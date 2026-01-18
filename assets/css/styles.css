@@ -56,7 +56,7 @@ a:hover {
 
 /* Landing Page Styles */
 
-#container {
+.container {
     height: 100vh;
     width: 100%;
 }
@@ -234,8 +234,31 @@ footer {
 
 #hotelsContainer {
     display: grid;
-    margin-top: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    
+    padding-bottom: 50px;   
+}
+
+/* Individual Hotel Card Styles */
+#hotelDetails {
+    padding-top: 100px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#tableDetails {
+    margin: auto;
+    margin-top: 30px;
+    width: 80%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    background-color: white;
+}
+
+th {
+    color:#395144
 }

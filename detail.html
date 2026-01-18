@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/styles.css">
-        <title>Singgah | Find your Room</title>
+        <title>Singgah | Hotel Details</title>
     </head>
     <body>
-        <!--Navigation Bar-->
+       <!--Navigation Bar-->
         <nav>
             <div id="logo">
                 <h2
@@ -28,21 +28,30 @@
                     <li><a href="about.html">About Us</a></li>
                 </ul>
             </div>
-        </nav>
-        <div id="hotelsPage">
-            <h1 style="color:#AA8B56; font-size:40px; margin-bottom: 20px;">
-                Mau <span style="font-family:Copperplate, Papyrus, fantasy;">Singgah</span> di mana?
-            </h1>
-            <div id="hotelsContainer">
-                <!-- Hotel list will be populated here -->
+        </nav> 
+
+        <div class="container">
+            <div id="hotelDetails">
+                <h1>Hotel Details</h1>
+                <table id="tableDetails">
+                    <thead>
+                        <tr>
+                            <th>Hotel Name</th>
+                            <th>Location</th>
+                            <th>Price per night</th>
+                            <th>Available Rooms</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hotelDetailsBody">
+                        <!-- Hotel details will be populated here -->
+                    </tbody>
+                </table>
             </div>
         </div>
         <footer>
             <p>&copy; 2026 Singgah. All rights reserved.</p>
         </footer>
-        
         <script src="assets/js/hotels-data.js"></script>
-        <script src="assets/js/form.js"></script>
-        <script src="assets/js/hotels.js"></script>
+        <script src="assets/js/detail.js"></script>
     </body>
 </html>
